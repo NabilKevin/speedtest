@@ -1,0 +1,132 @@
+:root {
+    --button-color: #ff598c;
+}
+.particle-btn:before,
+.particle-btn:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 140%;
+    height: 100%;
+    transition: all .5 ease-in-out;   
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 1;
+    display: block; 
+}
+
+.particle-btn:before {
+    top: -75%;
+    background-image: 
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% );
+    background-size: 50px 50px, 45px 45px, 40px 40px, 35px 35px, 30px 30px, 25px 25px, 20px 20px, 15px 15px;
+}
+
+.particle-btn:after {
+    bottom: -75%;
+    background-image: 
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% )
+        radial-gradient(circle, var(--button-color) 20%, transparent 20% );
+    background-size: 50px 50px, 45px 45px, 40px 40px, 35px 35px, 30px 30px, 25px 25px, 20px 20px, 15px 15px;
+}
+
+.particle-btn:hover:before {
+    animation: topCircleAnimation ease-in-out .7s;
+}
+
+.particle-btn:hover:after {
+    animation: bottomCircleAnimation ease-in-out .7s;
+}
+
+@keyframes topCircleAnimation {
+    0% {
+        background-position: 
+            5% 90%,
+            10% 90%,
+            15% 90%,
+            20% 90%,
+            25% 90%,
+            30% 90%,
+            35% 90%,
+            40% 90%
+        ;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        background-position: 
+            3% 33%,
+            70% 94%,
+            8% 8%,
+            88% 32%,
+            90% 74%,
+            91% 20%,
+            30% 61%,
+            32% 32%
+        ;
+    }
+    100% {
+        background-position: 
+            9% 72%,
+            28% 58%,
+            54% 35%,
+            37% 6%,
+            20% 78%,
+            92% 91%,
+            47% 25%,
+            60% 71%
+        ;
+        background-size: 0 0;
+    }
+}
+
+@keyframes bottomCircleAnimation {
+    0% {
+        background-position: 
+        34% 6%,
+         30% 15%,
+         22% 14%,
+         45% 38%,
+         76% 67%,
+         49% 34%,
+         21% 18%,
+         30% 64%
+        ;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        background-position: 
+        49% 8%,
+         75% 29%,
+         74% 93%,
+         11% 67%,
+         56% 19%,
+         64% 72%,
+         51% 16%,
+         83% 85%
+        ;
+    }
+    100% {
+        background-position: 
+        26% 60%, 55% 15%, 4% 14%, 51% 18%, 74% 56%, 86% 89%, 38% 90%, 28% 54%
+        ;   
+        background-size: 0 0;
+    }
+}
